@@ -47,7 +47,7 @@ class TestGetDefaultDisplayMode(unittest.TestCase):
 class TestLogFrameProgress(unittest.TestCase):
     def test(self):
         total = 5
-        results = range(0, total)
+        results = range(total)
         stdout = io.StringIO()
 
         _log_frame_progress(total, results, stdout)

@@ -74,7 +74,7 @@ def export_txt_frame(txt_filename, cell_char, rows, cols, **options):
                         fg = to_rgb(escape_seq[6:])
                     elif escape_seq.startswith('[38;2;'):
                         # truecolor FG
-                        fg = tuple([int(c) for c in escape_seq[6:].split(';')])
+                        fg = tuple(int(c) for c in escape_seq[6:].split(';'))
 
                     escaped = False
                     escape_seq = []

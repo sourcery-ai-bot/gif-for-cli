@@ -109,7 +109,7 @@ class TestConvertFrame(unittest.TestCase):
     def test(self, mock_Image):
         im = Image.new('RGB', (100, 100,))
         # this exercises some code branches that handle multiple colors
-        for i in range(0, 10):
+        for i in range(10):
             im.putpixel((i, 0,), (255, 255, 5 * i,))
 
         mock_Image.open.return_value = im
